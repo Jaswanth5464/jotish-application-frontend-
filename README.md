@@ -12,6 +12,8 @@ A comprehensive, interactive Employee Management Dashboard built with React, Typ
         
 - **A screen recording of the end-to-end working app**
 
+- https://drive.google.com/file/d/1di0ORQdxEMp63owNmyfT1AeDK_zqsY7F/view?usp=sharing
+
 ## ✨ Key Features
 
 Based on the assessment requirements, this application implements the following core features:
