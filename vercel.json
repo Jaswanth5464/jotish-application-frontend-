@@ -1,6 +1,10 @@
 {
   "rewrites": [
     {
+      "source": "/api/employees",
+      "destination": "https://backend.jotish.in/backend_dev/gettabledata.php"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }

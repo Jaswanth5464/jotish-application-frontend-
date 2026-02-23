@@ -12,7 +12,7 @@ export interface Employee {
 
 export const fetchEmployees = async (): Promise<Employee[]> => {
   try {
-    const response = await fetch('https://backend.jotish.in/backend_dev/gettabledata.php', {
+    const response = await fetch('/api/employees', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -31,15 +31,31 @@ export const fetchEmployees = async (): Promise<Employee[]> => {
     
     let result: any = [];
 
-    // The API might return an object with a data property or an array directly
-    // Let's handle both cases to prevent the .filter is not a function error
-    if (Array.isArray(data)) {
+    // The API returns a specific format: {"TABLE_DATA": {"data": [["Name", "Role", "City", "Ext", "Date", "Salary"], ...]}}
+    if (data && data.TABLE_DATA && Array.isArray(data.TABLE_DATA.data)) {
+      result = data.TABLE_DATA.data.map((row: any[], index: number) => {
+        // Clean up salary string (e.g. "$320,800" -> "320800")
+        const rawSalary = row[5] || '0';
+        const cleanSalary = rawSalary.replace(/[^0-9.-]+/g, "");
+
+        return {
+          id: String(index + 1),
+          user_name: row[0] || 'Unknown',
+          user_department: row[1] || 'Unknown',
+          user_city: row[2] || 'Unknown',
+          user_age: '30', // Default age as it's not in the API
+          user_email: `${(row[0] || 'user').replace(/\s+/g, '.').toLowerCase()}@example.com`,
+          user_gender: 'Not Specified',
+          user_salary: cleanSalary,
+          user_status: 'Active'
+        } as Employee;
+      });
+    } else if (Array.isArray(data)) {
       result = data;
     } else if (data && typeof data === 'object') {
       if (Array.isArray(data.data)) {
         result = data.data;
       } else {
-        // If it's an object but not an array, try to extract values
         const values = Object.values(data);
         if (values.length > 0 && Array.isArray(values[0])) {
           result = values[0];
