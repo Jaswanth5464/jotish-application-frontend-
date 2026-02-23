@@ -13,16 +13,16 @@ A comprehensive, interactive Employee Management Dashboard built with React, Typ
 
 
 
-        <img width="1309" height="581" alt="image" src="https://github.com/user-attachments/assets/58e5423e-79ac-42a8-81b7-2ad6ff548ebc" />
+
+    <img width="1309" height="581" alt="image" src="https://github.com/user-attachments/assets/86dbe4e5-74a0-4bea-ab88-bcc0fdd9345e" />
 
 
 
-        <img width="1263" height="697" alt="image" src="https://github.com/user-attachments/assets/f8920c84-f7cd-4500-a25f-7e557d0af07c" />
+    <img width="1263" height="697" alt="image" src="https://github.com/user-attachments/assets/d5627574-27dc-4ec3-9cc2-a84874b8e360" />
 
 
 
-
-         <img width="1151" height="660" alt="image" src="https://github.com/user-attachments/assets/e8a7274e-5eab-4e6f-a3ec-8e34c0d112e6" />
+    <img width="1151" height="660" alt="image" src="https://github.com/user-attachments/assets/7c1c825e-f004-460a-8173-a2c7dbe21df0" />
 
 
 
