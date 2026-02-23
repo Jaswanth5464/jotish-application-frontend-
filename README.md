@@ -9,23 +9,7 @@ A comprehensive, interactive Employee Management Dashboard built with React, Typ
 
 
 - **Screenshots of important screens** (Login, Dashboard, Charts, Map, Camera)
-        <img width="1228" height="672" alt="image" src="https://github.com/user-attachments/assets/fea6ecfa-76be-486f-9e6f-9236637e5461" />
-
-
-
-
-    <img width="1309" height="581" alt="image" src="https://github.com/user-attachments/assets/86dbe4e5-74a0-4bea-ab88-bcc0fdd9345e" />
-
-
-
-    <img width="1263" height="697" alt="image" src="https://github.com/user-attachments/assets/d5627574-27dc-4ec3-9cc2-a84874b8e360" />
-
-
-
-    <img width="1151" height="660" alt="image" src="https://github.com/user-attachments/assets/7c1c825e-f004-460a-8173-a2c7dbe21df0" />
-
-
-
+        
 - **A screen recording of the end-to-end working app**
 
 ## ✨ Key Features

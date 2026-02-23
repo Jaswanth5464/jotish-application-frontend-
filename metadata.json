@@ -1,5 +1,5 @@
 {
-  "name": "",
-  "description": "",
-  "requestFramePermissions": []
+  "name": "Employee Dashboard",
+  "description": "Employee management dashboard with webcam integration",
+  "requestFramePermissions": ["camera"]
 }
