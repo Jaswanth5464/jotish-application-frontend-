@@ -6,9 +6,29 @@ A comprehensive, interactive Employee Management Dashboard built with React, Typ
 **[View Live Application on Vercel](https://jotish-git-main-jaswanths-projects-d3e93672.vercel.app/)**
 
 ## 📁 Assessment Submission Links
+<img width="1108" height="610" alt="image" src="https://github.com/user-attachments/assets/220d70d8-6e05-4aa1-af1e-cd4db925c325" />
+
+
+<img width="1268" height="601" alt="image" src="https://github.com/user-attachments/assets/e28b79e7-a783-4fba-8dc7-7dac526de679" />
+
+
+<img width="1128" height="475" alt="image" src="https://github.com/user-attachments/assets/76b97745-9663-41fd-baf8-465507a665da" />
+
+
+<img width="1161" height="563" alt="image" src="https://github.com/user-attachments/assets/b314a997-63b7-4cea-9a75-46505c84a4a3" />
+
+
+<img width="852" height="381" alt="image" src="https://github.com/user-attachments/assets/bef656a3-2436-4a2d-ae36-4451669a58fe" />
+
+
+
+<img width="1131" height="642" alt="image" src="https://github.com/user-attachments/assets/a910e3c5-56cc-4e41-871a-573dfcaf5b64" />
+
 
 
 - **Screenshots of important screens** (Login, Dashboard, Charts, Map, Camera)
+
+- 
         
 - **A screen recording of the end-to-end working app**
 
