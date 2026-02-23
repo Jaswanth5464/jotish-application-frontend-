@@ -64,10 +64,16 @@ export default function Charts() {
     return acc;
   }, {} as Record<string, number>);
 
-  const departmentData = Object.entries(departmentCounts).map(([name, value]) => ({
-    name,
-    value,
-  }));
+  let departmentData = Object.entries(departmentCounts)
+    .map(([name, value]) => ({ name, value }))
+    .sort((a, b) => b.value - a.value);
+
+  // Group into "Other" if there are too many departments to prevent legend overflow
+  if (departmentData.length > 6) {
+    const top5 = departmentData.slice(0, 5);
+    const others = departmentData.slice(5).reduce((sum, item) => sum + item.value, 0);
+    departmentData = [...top5, { name: 'Other', value: others }];
+  }
 
   // Prepare data for City Distribution
   const cityCounts = safeEmployees.reduce((acc, emp) => {
@@ -176,11 +182,11 @@ export default function Charts() {
             className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100"
           >
             <h3 className="text-lg font-bold text-gray-900 mb-6">Top 10 Highest Salaries</h3>
-            <div className="h-80">
+            <div className="h-96">
               <ResponsiveContainer width="100%" height="100%">
                 <BarChart data={top10Salaries} margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
                   <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#f3f4f6" />
-                  <XAxis dataKey="name" axisLine={false} tickLine={false} tick={{ fill: '#6b7280', fontSize: 12 }} />
+                  <XAxis dataKey="name" axisLine={false} tickLine={false} tick={{ fill: '#6b7280', fontSize: 11, angle: -45, textAnchor: 'end' }} height={60} />
                   <YAxis axisLine={false} tickLine={false} tick={{ fill: '#6b7280', fontSize: 12 }} tickFormatter={(value) => `₹${value / 1000}k`} />
                   <Tooltip
                     cursor={{ fill: '#f3f4f6' }}
@@ -201,7 +207,7 @@ export default function Charts() {
             className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100"
           >
             <h3 className="text-lg font-bold text-gray-900 mb-6">Department Distribution</h3>
-            <div className="h-80">
+            <div className="h-96">
               <ResponsiveContainer width="100%" height="100%">
                 <RechartsPieChart>
                   <Pie
@@ -234,7 +240,7 @@ export default function Charts() {
             className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 lg:col-span-2"
           >
             <h3 className="text-lg font-bold text-gray-900 mb-6">Top 5 Cities by Employee Count</h3>
-            <div className="h-80">
+            <div className="h-96">
               <ResponsiveContainer width="100%" height="100%">
                 <BarChart data={cityData} layout="vertical" margin={{ top: 5, right: 30, left: 40, bottom: 5 }}>
                   <CartesianGrid strokeDasharray="3 3" horizontal={false} stroke="#f3f4f6" />
